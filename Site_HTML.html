@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Institucional - ElétricaFacil</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="CSS/Site_CSS.css" />
+  </head>
+  <body>
+    <footer class="rodape">
+      <div class="logo">
+        <img src="/IMAGENS/image.png" alt="Logo ElétricaFacil" />
+      </div>
+      <div class="rodape-links">
+        <a href="#" class="nav-link">
+          <span class="item-icone">
+            <i class='bx  bxs-home'></i> 
+          </span>
+          <span class=="item-texto">Sobre Nós</span>
+
+        <a href="#" class="nav-link">
+          <span class="item-icone">
+            <i class='bx  bx-task'  ></i> 
+          </span>
+          <span class="item-texto">Serviço</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <span class="item-icone">
+            <i class='bx  bxs-contact'  ></i> 
+          </span>
+          <span class="item-texto">Contato</span>
+        </a> 
+      </div>
+    </footer>
+
+    <section class="form-orcamento">
+      <h2>Simule seu Orcamento, Agora!</h2>
+
+      <div class="form-orcamento-container">
+        <form>
+          <div class="form-grupo">
+            <label for="nome">Nome Completo*</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Dgite seu nome completo"
+              required
+            />
+          </div>
+
+          <div class="form-grupo">
+            <label for="telefone">Telefone/ Celular*</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="Ex: (99) 99999-9999"
+            />
+            
+          </div>
+
+          <div class="form-grupo">
+            <label for="cidade">Cidade*</label>
+            <select id="cidade" name="cidade" required>
+              <option value="" disabled selected>Selecione sua cidade</option>
+              <option value="Maringa">Maringa</option>
+              <option value="Sarandi">Sarandi</option>
+              <option value="iguatemi">Iguatemi</option>
+              <option value="Mandaguacu">Mandaguacu</option>
+              <option value="Paicandu">Paicandu</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label for="Serviço">Qual Serviço deseja?*</label>
+            <select id="servico" name="servico" required>
+              <option value="" disabled selected>Selecione um serviço</option>
+              <option value="instalacao">Instalação Elétrica</option>
+              <option value="manutencao">Manutenção Elétrica</option>
+              <option value="reforma">Reforma Elétrica</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label for="descricao">Descrição*</label>
+            <textarea
+              id="descricao"
+              name="descricao"
+              placeholder="Descreva brevemente o problema que deseja resolver."
+              required
+            ></textarea>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

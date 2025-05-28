@@ -1,0 +1,171 @@
+:root {
+  --primary-color: #133247;
+  --secondary-color: #f3ae4b;
+  --text-color: #ffffff;
+  --bg-form-orcamento: #bdd8f1;
+  --bg-form-orcamento-container: #68859c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-y: auto;
+}
+
+.rodape .logo img {
+  width: 125px;
+  height: 105px;
+  display: flex;
+  margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rodape {
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  display: flex;
+  color: #fff;
+  padding: 0px;
+  height: 105px;
+  box-sizing: border-box;
+}
+
+.rodape-links {
+  list-style-type: none;
+  display: flex;
+  margin-left: 250px;
+  margin-right: 300px;
+  margin-top: 15px;
+  align-items: center;
+  gap: 120px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.rodape-links a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  transition: all 0.5s ease;
+  transform: translateY(-8px);
+  font-weight: bold;
+}
+
+.rodape-links a:hover {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.nav-link {
+  display: inline-flex;
+  column-gap: 0.5rem;
+}
+
+.form-orcamento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-form-orcamento);
+}
+
+.form-orcamento h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-right: 200px;
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.form-orcamento-container {
+  background-color: var(--bg-form-orcamento-container);
+  height: 708px;
+  padding: 40px;
+  border-radius: 10px;
+  width: 633px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-grupo input,
+.form-grupo select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+.form-grupo input[type="tel"] {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+.form-grupo textarea {
+  height: 125px;
+  width: 391px;
+  resize: vertical;
+}
+
+@media (max-width: 1000px) {
+  .rodape {
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .rodape .logo img {
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .rodape-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0px;
+    margin-right: 2px;
+    margin-top: 1px;
+    transition: all 0.8s ease;
+  }
+
+  .rodape-links a {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
