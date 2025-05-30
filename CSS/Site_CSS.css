@@ -16,19 +16,19 @@ body {
   font-family: Arial, sans-serif;
   color: #fff;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.rodape .logo img {
+.rodape-superior .logo-superior img {
   width: 125px;
   height: 105px;
   display: flex;
   margin-left: 200px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.rodape {
+.rodape-superior {
   justify-content: space-between;
   background-color: var(--primary-color);
   display: flex;
@@ -47,7 +47,7 @@ body {
   align-items: center;
   gap: 120px;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 1.0em;
   font-weight: bold;
 }
 
@@ -57,7 +57,6 @@ body {
   position: relative;
   transition: all 0.5s ease;
   transform: translateY(-8px);
-  font-weight: bold;
 }
 
 .rodape-links a:hover {
@@ -65,12 +64,70 @@ body {
   transition: color 0.3s ease;
   border-bottom: 1px solid #ffffff;
   cursor: pointer;
-  background-color: transparent;
 }
 
 .nav-link {
   display: inline-flex;
   column-gap: 0.5rem;
+}
+
+.jornada-profissional {
+  height: 100vh;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  ;
+}
+
+.titulo-jornada-profissional {
+  font-size: 2.5em;
+  color: #fd8e0c;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.recipiente-cartao {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cartao {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 340px;
+  height: 399px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.8s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-10px);
+}
+
+.cabeça-cartao {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #08456e;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  margin: -20px -20px 20px -20px;
+}
+
+.cabeça-cartao .icon {
+  font-size: 1.5em;
+}
+
+.cartao h3 {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin: 0;
 }
 
 .form-orcamento {
@@ -92,10 +149,10 @@ body {
 
 .form-orcamento-container {
   background-color: var(--bg-form-orcamento-container);
+  width: 633px;
   height: 708px;
   padding: 40px;
   border-radius: 10px;
-  width: 633px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -139,7 +196,27 @@ label {
   resize: vertical;
 }
 
-@media (max-width: 1000px) {
+.rodape-inferior {
+  background-color: var(--primary-color);
+  height: 444px;
+  width: 2000px;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.imagem-logo img {
+  width: 189.09px;
+  height: 160.59px;
+  display: flex;
+  margin-left: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
   .rodape {
     background-color: var(--primary-color);
     flex-direction: column;
@@ -167,5 +244,16 @@ label {
   .rodape-links a {
     font-size: 15px;
     margin-bottom: 10px;
+  }
+
+  .recipiente-cartao {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cartao {
+    width: 90%;
+    max-width: 340px;
+    max-height: 220px;
   }
 }
