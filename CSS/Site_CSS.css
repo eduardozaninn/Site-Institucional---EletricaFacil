@@ -71,6 +71,45 @@ body {
   column-gap: 0.5rem;
 }
 
+.main-banner {
+  height: 650px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-banner .imagem {
+  background-image: url("/IMAGENS/insMind.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  min-width: 500px;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-banner .imagem h1,
+.main-banner .imagem p {
+  color: #fff;
+  font-family: Helvetica;
+  text-align: center;
+  font-weight: bolder;
+  text-shadow: #000 5px 4px 5px;
+}
+
+.main-banner .imagem h1 {
+  font-size: 54px;
+}
+
+.main-banner .imagem p {
+  font-size: 32px;
+}
+
 .jornada-profissional {
   height: 100vh;
   padding: 20px;
