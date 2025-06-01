@@ -91,6 +91,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: darken;
 }
 
 .main-banner .imagem h1,
@@ -111,11 +113,9 @@ body {
 }
 
 .jornada-profissional {
-  height: 100vh;
   padding: 20px;
   max-width: 1100px;
   margin: 0 auto;
-  ;
 }
 
 .titulo-jornada-profissional {
@@ -167,6 +167,104 @@ body {
   font-size: 1.2em;
   color: #ffffff;
   margin: 0;
+}
+
+.principais-servicos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  background-color: #f5f5f5;
+}
+
+.titulo-servicos {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #133247;
+  text-align: center;
+}
+
+.titulo-servicos h3 {
+  font-size: 2rem;
+  color: #fd8e0c;
+  margin: 0;
+}
+
+.principais-servicos .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container .item-um,
+.container .item-dois,
+.container .item-tres {
+  background-color: #fff;
+  width: 340px;
+  height: 399px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.container .item-um:hover,
+.container .item-dois:hover,
+.container .item-tres:hover {
+  transform: translateY(-5px);
+}
+
+.imagem-fiacao,
+.imagem-tomadas-interruptores,
+.imagem-quadros-disjuntores {
+  height: 220px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.imagem-fiacao {
+  background-image: url("/IMAGENS/fiaçao.jpg");
+}
+
+.imagem-tomadas-interruptores {
+  background-image: url("/IMAGENS/tomadas-interruptores.jpg");
+}
+
+.imagem-quadros-disjuntores {
+  background-image: url("/IMAGENS/quadros-disjuntores.jpg");
+}
+
+.descricao {
+  flex: 1;
+  padding: 1rem;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+.descricao h4 {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+
+.descricao p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .form-orcamento {
@@ -255,7 +353,7 @@ label {
   margin-right: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .rodape {
     background-color: var(--primary-color);
     flex-direction: column;
@@ -294,5 +392,25 @@ label {
     width: 90%;
     max-width: 340px;
     max-height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .principais-servicos .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .item-um,
+  .container .item-dois,
+  .container .item-tres {
+    width: 80%;
+    height: auto;
+  }
+
+  .imagem-fiacao,
+  .imagem-tomadas-interruptores,
+  .imagem-quadros-disjuntores {
+    height: 180px;
   }
 }
