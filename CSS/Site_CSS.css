@@ -26,6 +26,8 @@ body {
   margin-left: 200px;
   justify-content: center;
   align-items: center;
+
+
 }
 
 .rodape-superior {
@@ -64,6 +66,7 @@ body {
   transition: color 0.3s ease;
   border-bottom: 1px solid #ffffff;
   cursor: pointer;
+
 }
 
 .nav-link {
@@ -120,8 +123,9 @@ body {
 
 .titulo-jornada-profissional {
   font-size: 2.5em;
-  color: #fd8e0c;
+  color: var(--secondary-color);
   margin-bottom: 50px;
+  margin-top: 35px;
   text-align: center;
 }
 
@@ -140,7 +144,7 @@ body {
   height: 399px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.8s ease;
+  transition: transform 0.3s ease;
 }
 
 .cartao:hover {
@@ -148,7 +152,7 @@ body {
 }
 
 .cabeça-cartao {
-  gap: 10px;
+  gap: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,8 +163,9 @@ body {
   margin: -20px -20px 20px -20px;
 }
 
-.cabeça-cartao .icon {
-  font-size: 1.5em;
+.cabeça-cartao img {
+  width: 25px;
+  height: 25px;
 }
 
 .cartao h3 {
@@ -338,19 +343,124 @@ label {
   height: 444px;
   width: 2000px;
   display: flex;
-  align-items: center;
-  padding: 15px 0;
+  align-items: flex-start;
+  padding: 80px 80px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.imagem-logo img {
-  width: 189.09px;
-  height: 160.59px;
-  display: flex;
-  margin-left: 115px;
-  display: flex;
-  justify-content: center;
+.informações-da-marca {
+  flex: 1;
+  min-width: 250px;
+
+}
+
+.no-rodape {
+  margin-left: 40px;
+  text-align: left;
+}
+
+.rodape-logo img {
+  max-width: 200.59px;
+  max-height: 200.09px;
+
+}
+
+.no-rodape .Serviço-Titulo {
+  font-size: 1.3em;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.no-rodape .desc {
+  font-size: 16px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+
+.no-rodape .copyright {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.image-linha-vertical {
+  margin-top: 40px;
+}
+
+.Regioes-Atendidas {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  flex: 1;
   align-items: center;
-  margin-right: 15px;
+
+}
+
+.Regioes-Atendidas h3 {
+  font-size: 1.3em;
+  color: var(--secondary-color);
+  margin-top: 0px;
+  margin-bottom: 35px;
+  font-weight: bold;
+}
+
+.lista-regioes {
+  display: flex;
+  flex-direction: column;
+}
+
+.lista-regioes img {
+  margin-right: 10px;
+}
+
+.rodape-inferior ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rodape-inferior ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.rodape-inferior ul li img {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.rodape-inferior ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: var(--text-color) 0.3s ease;
+}
+
+.rodape-inferior ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.icone-social img {
+  height: 35px;
+  width: 35px;
+  margin-right: 150px;
+}
+
+.Minhas-redes-sociais {
+  margin-top: 50px;
+  margin-right: 200px;
+}
+
+.Minhas-redes-sociais h4 {
+  font-size: 1.3em;
+  color: var(--secondary-color);
+  margin-top: 0px;
+  margin-bottom: 35px;
+  font-weight: bold;
 }
 
 @media (max-width: 576px) {
