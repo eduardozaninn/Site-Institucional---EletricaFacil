@@ -51,6 +51,7 @@ body {
   color: #ffffff;
   font-size: 1.0em;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .rodape-links a {
@@ -64,7 +65,6 @@ body {
 .rodape-links a:hover {
   color: var(--secondary-color);
   transition: color 0.3s ease;
-  border-bottom: 1px solid #ffffff;
   cursor: pointer;
 
 }
@@ -455,6 +455,129 @@ label {
   margin-right: 200px;
 }
 
+@media (max-width: 480px) {
+  .rodape-superior {
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .rodape-superior .logo-superior img {
+    margin-left: 0;
+    width: 90px;
+    height: 75px;
+    margin-bottom: 10px;
+  }
+
+  .rodape-links {
+    margin-left: 0;
+    margin-right: 0;
+    gap: 15px;
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
+
+  .main-banner {
+    height: 400px;
+    margin-top: 0.5rem;
+  }
+
+  .main-banner .imagem {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .main-banner .imagem h1 {
+    font-size: 32px;
+  }
+
+  .main-banner .imagem p {
+    font-size: 20px;
+  }
+
+  .jornada-profissional {
+    padding: 10px;
+  }
+
+  .titulo-jornada-profissional {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+
+  .recipiente-cartao {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cartao {
+    width: 90%;
+    max-width: 300px;
+  }
+
+
+  .principais-servicos {
+    margin-top: 1rem;
+  }
+
+  .titulo-servicos h3 {
+    font-size: 1.5rem;
+  }
+
+  .principais-servicos .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .item-um,
+  .container .item-dois,
+  .container .item-tres {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .imagem-fiacao,
+  .imagem-tomadas-interruptores,
+  .imagem-quadros-disjuntores {
+    height: 150px;
+  }
+
+  .rodape-inferior {
+    padding: 40px 20px;
+  }
+
+  .rodape-logo img {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .no-rodape .Serviço-Titulo,
+  .Regioes-Atendidas h3,
+  .Minhas-redes-sociais h4 {
+    font-size: 1.1em;
+  }
+
+  .rodape-inferior ul li {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .rodape-inferior ul li img {
+    margin-right: 10px;
+  }
+
+  .icone-social img {
+    margin-right: 5px;
+  }
+
+  .image-linha-vertical {
+    display: inline-block; 
+    vertical-align: middle; 
+    margin-top: 0; 
+    margin-left: 5px; 
+    height: 80px; 
+    width: 1px; 
+  }
+}
+
 .Minhas-redes-sociais h4 {
   font-size: 1.3em;
   color: var(--secondary-color);
@@ -464,11 +587,16 @@ label {
 }
 
 @media (max-width: 576px) {
-  .rodape {
+  .rodape-superior {
     background-color: var(--primary-color);
     flex-direction: column;
     align-items: center;
-    height: auto;
+    text-align: center;
+    height: 400px;
+  }
+
+  .logo-superior {
+    margin-right: 50px;
   }
 
   .rodape .logo img {
@@ -499,7 +627,7 @@ label {
   }
 
   .cartao {
-    width: 90%;
+    width: 80%;
     max-width: 340px;
     max-height: 220px;
   }
@@ -523,4 +651,150 @@ label {
   .imagem-quadros-disjuntores {
     height: 180px;
   }
+}
+
+@media (max-width: 1024px) {
+  .rodape-superior .logo-superior img {
+    margin-left: 50px;
+    width: 105px;
+    height: 105px;
+  }
+
+  .rodape-links {
+    margin:  60px 100px 100px;
+    gap: 60px;
+    font-size: 0.96em;
+  }
+
+  .main-banner .imagem{
+    width: 90%;
+    min-width: unset;
+  }
+
+  .main-banner .imagem h1 {
+    font-size: 44px
+  }
+
+  .main-banner .imagem p {
+    font-size: 26px;
+  }
+
+  .jornada-profissional {
+    padding: 15px;
+    max-width: 900px;
+  }
+
+  .titulo-jornada-profissional {
+    font-size: 2.3em;
+    margin-bottom: 40px;
+  }
+
+  .recipiente-cartao {
+    align-items: center;
+  }
+
+  .cartao {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .cabeça-cartao {
+    padding: 10px;
+    margin: -15px -15px 15px -15px;
+  }
+
+  .cabeça-cartao img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cartao .cabeça-cartao .conteudo-cartao {
+    width: 300px;
+    height: auto;
+  }
+
+  .cartao h3 {
+    font-size: 1.1em;
+  }
+
+  .principais-servicos .container {
+    gap: 15px;
+  }
+
+  .container .item-um,
+  .container .item-dois,
+  .container .item-tres {
+    width: 300px;
+    height: auto;
+  }
+
+  .imagem-fiacao,
+  .imagem-tomadas-interruptores,
+  .imagem-quadros-disjuntores {
+    height: 180px;
+  }
+
+  .descricao h4 {
+    font-size: 1.1rem;;
+  }
+
+  .descricao p {
+    font-size: 0.95rem;
+  }
+
+  .rodape-inferior {
+    width: 100%;
+    height: auto;
+    padding: 60px 40px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .informações-da-marca {
+    margin-bottom: 30px;
+  }
+
+  .no-rodape {
+    margin-left: 0;
+  }
+
+  .rodape-logo img {
+    margin: 0px 0px 0px 108px;
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .Serviço-Titulo,
+  .desc,
+  .copyright {
+    text-align: center;
+  }
+
+  .imagem-linha-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-left: 10px;
+    height: 100px;
+    width: 2px;
+  }
+
+  .Regioes-Atendidas {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  
+  .Minhas-redes-sociais  {
+    margin: 30px 0;
+  }
+
+  .icone-social img {
+    margin-right: 10px;
+  }
+
 }
