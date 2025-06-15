@@ -7,6 +7,12 @@ const labelQuantidade = document.getElementById("labelQuantidade");
 const cancelarBtn = document.getElementById("cancelarBtn");
 const acoesOrcamento = document.getElementById("acoesOrcamento");
 
+const nome = document.getElementById("nome");
+const cidade = document.getElementById("cidade");
+const email = document.getElementById("email");
+const telefone = document.getElementById("telefone");
+const whatsappBtn = document.getElementById("whatsappBtn");
+
 const precos = {
   fiacao: { label: "Quantos metros de fiação?", valor: 10 },
   manutencao: { label: "Quantos metros afetados?", valor: 15 },
@@ -17,7 +23,10 @@ const precos = {
   quadro: { label: "Quantos quadros?", valor: 300 },
   ManutencaoQuadro: { label: "Quantos quadros para manutenção?", valor: 180 },
   disjuntor: { label: "Quantos disjuntores?", valor: 50 },
-  ManutencaoDisjuntor: { label: "Quantos disjuntores para manutenção?", valor: 35 },
+  ManutencaoDisjuntor: {
+    label: "Quantos disjuntores para manutenção?",
+    valor: 35,
+  },
   casa: { label: "Quantos metros quadrados a casa possui?", valor: 60 },
 };
 
@@ -42,6 +51,32 @@ form.addEventListener("submit", function (e) {
     const valor = qtd * preco.valor;
     resultado.textContent = `R$ ${valor.toFixed(2).replace(".", ",")}`;
     acoesOrcamento.classList.add("mostrar");
+
+    const textoParaServico = servico.options[servico.selectedIndex].text;
+
+    const textoDeCidade = cidade.options[cidade.selectedIndex].text;
+
+    const numeroDoWhatsapp = "4488035397";
+
+    const mensagem = `Olá! Gostaria de solicitar um orçamento. 😊
+
+  *DADOS DO CLIENTE:*
+  👤 *Nome:* ${nome.value}
+  🏙️ *Cidade:* ${textoDeCidade}
+  📧 *E-mail:* ${email.value}
+  📞 *Telefone:* ${telefone.value}  
+
+  *DETALHES DO ORÇAMENTO:*
+  🔧 *Serviço:* ${textoParaServico}
+  🔢 *Quantidade:* ${qtd}
+  💰 *Total Estimado:* ${resultado.textContent}
+
+  Aguardo seu contato para confirmar os detalhes. Obrigado!`;
+
+    const linkDoWhatsapp = `https://api.whatsapp.com/send?phone=${numeroDoWhatsapp}&text=${encodeURIComponent(
+      mensagem
+    )}`;
+    whatsappBtn.href = linkDoWhatsapp;
   } else {
     resultado.textContent = `Preencha corretamente os campos para calcular o orçamento.`;
     acoesOrcamento.classList.remove("mostrar");
@@ -53,4 +88,29 @@ cancelarBtn.addEventListener("click", () => {
   campoQuantidade.style.display = "none";
   resultado.textContent = "R$ 0,00";
   acoesOrcamento.classList.remove("mostrar");
+});
+
+gsap.registerPlugin(ScrollToPlugin);
+
+const NavLinks = document.querySelectorAll(".rodape-links a.nav-link");
+
+NavLinks.forEach((Link) => {
+  Link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetID = this.getAttribute("href");
+
+    const animOptions = {
+      duration: 1.5,
+      scrollTo: targetID,
+      ease: "power2.inOut",
+    };
+
+    if (targetID === "#Orcamento") {
+      animOptions.ease = "power2.inOut";
+      animOptions.duration = 2;
+    }
+
+    gsap.to(window, animOptions);
+  });
 });
