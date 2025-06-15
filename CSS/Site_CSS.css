@@ -324,70 +324,178 @@ body {
   line-height: 1.4;
 }
 
-.form-orcamento {
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: var(--bg-form-orcamento);
+  padding: 50px 20px;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
 }
 
-.form-orcamento h2 {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 20px;
-  margin-right: 200px;
-  font-size: 56px;
+.aviso{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aviso h2{
+  color: var(--secondary-color);
+}
+
+.aviso p{
+  color: #1e3a8a;;
   font-weight: bold;
 }
 
-.form-orcamento-container {
-  background-color: var(--bg-form-orcamento-container);
-  width: 633px;
-  height: 708px;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.formulario-box {
+  background-color: #e5e7eb;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
-.form-grupo {
-  display: flex;
-  flex-direction: column;
+.formulario-box h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.form-section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 label {
   display: block;
-  color: var(--text-color);
-  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: 500;
+  text-align: left;
+  font-size: 14px;
+  color: #1e3a8a;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-top: 5px;
   font-size: 14px;
 }
 
-.form-grupo input,
-.form-grupo select {
+.input-duplo {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-duplo > div {
+  flex: 1 1 45%;
+}
+
+.campo-extra {
+  display: none;
+}
+
+.resultado-box {
+  background-color: #fbbf24;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin-top: 20px;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  background-color: #f59e0b;
   border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #000;
+  border-radius: 8px;
+  color: white;
   font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-.form-grupo input[type="tel"] {
+button:hover {
+  background-color: #d97706;
+}
+
+.acoes-btns {
+  display: none;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.acoes-btns.mostrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.btn-whatsapp,
+.btn-cancelar {
   width: 50%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
   font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
 }
 
-.form-grupo textarea {
-  height: 125px;
-  width: 391px;
-  resize: vertical;
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-cancelar {
+  background-color: #ef4444;
+  margin-top: 0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background-color: #dc2626;
+}
+
+.whatsapp-icon {
+  filter: brightness(0) invert(1);
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 .rodape-inferior {
@@ -842,11 +950,8 @@ label {
   .rodape-inferior ul li img {
     margin-right: 10px;
   }
-}
 
-
-@media (max-width: 576px) {
-  .principais-servicos .container {
+    .principais-servicos .container {
     flex-direction: column;
     align-items: center;
   }
@@ -863,4 +968,5 @@ label {
   .imagem-quadros-disjuntores {
     height: 180px;
   }
+
 }

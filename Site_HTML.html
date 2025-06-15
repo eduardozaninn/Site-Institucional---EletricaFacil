@@ -11,6 +11,7 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="CSS/Site_CSS.css" />
+  <script src="/js/style.js" defer></script>
 </head>
 
 <body>
@@ -129,53 +130,85 @@
     </div>
   </div>
 
-  <section id="Orcamento" class="form-orcamento">
-    <h2>Simule seu Orcamento, Agora!</h2>
-
-    <div class="form-orcamento-container">
-      <form>
-        <div class="form-grupo">
-          <label for="nome">Nome Completo*</label>
-          <input type="text" id="nome" name="nome" placeholder="Dgite seu nome completo" required />
-        </div>
-
-        <div class="form-grupo">
-          <label for="telefone">Telefone/ Celular*</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="Ex: (99) 99999-9999" />
-
-        </div>
-
-        <div class="form-grupo">
-          <label for="cidade">Cidade*</label>
-          <select id="cidade" name="cidade" required>
-            <option value="" disabled selected>Selecione sua cidade</option>
-            <option value="Maringa">Maringa</option>
-            <option value="Sarandi">Sarandi</option>
-            <option value="iguatemi">Iguatemi</option>
-            <option value="Mandaguacu">Mandaguacu</option>
-            <option value="Paicandu">Paicandu</option>
-          </select>
-        </div>
-
-        <div class="form-grupo">
-          <label for="Serviço">Qual Serviço deseja?*</label>
-          <select id="servico" name="servico" required>
-            <option value="" disabled selected>Selecione um serviço</option>
-            <option value="instalacao">Instalação Elétrica</option>
-            <option value="manutencao">Manutenção Elétrica</option>
-            <option value="reforma">Reforma Elétrica</option>
-            <option value="outro">Outro</option>
-          </select>
-        </div>
-
-        <div class="form-grupo">
-          <label for="descricao">Descrição*</label>
-          <textarea id="descricao" name="descricao" placeholder="Descreva brevemente o problema que deseja resolver."
-            required></textarea>
-        </div>
-      </form>
+  <div class="wrapper">
+    <div class="aviso">
+      <h2>Preencha o formulário</h2>
+      <p>E receba uma estimativa de orçamento em minutos!</p>
     </div>
-  </section>
+
+    <div class="formulario-box">
+      <h3>Orçamento Inicial</h3>
+      <form id="formOrcamento">
+        <div class="form-section">
+          <div class="input-duplo">
+            <div>
+              <label for="nome">Nome Completo</label>
+              <input type="text" id="nome" placeholder="Digite seu nome completo" required />
+            </div>
+            <div>
+              <label for="cidade">Cidade - Estado</label>
+              <select id="cidade" required>
+                <option value="">Selecione</option>
+                <option value="iguatemi">Iguatemi - PR</option>
+                <option value="mandaguacu">Mandaguaçu - PR</option>
+                <option value="maringa">Maringá - PR</option>
+                <option value="paicandu">Paiçandu - PR</option>
+                <option value="sarandi">Sarandi - PR</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-duplo">
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" id="email" placeholder="Digite seu e-mail" required />
+            </div>
+            <div>
+              <label for="telefone">Telefone/Celular</label>
+              <input type="tel" id="telefone" placeholder="Ex: (99) 99999-9999" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label for="servico">Serviços</label>
+          <select id="servico" required>
+            <option value="">Selecione</option>
+            <option value="fiacao">Instalação de Fiação Elétrica</option>
+            <option value="manutencao">Manutenção de Fiação Elétrica</option>
+            <option value="tomada">Instalação de Tomadas</option>
+            <option value="interruptor">Instalação de Interruptores</option>
+            <option value="luminaria">Instalação de Luminárias</option>
+            <option value="3way">Interruptores de Luz (3-way)</option>
+            <option value="quadro">Instalação de Quadros de Distribuição</option>
+            <option value="ManutencaoQuadro">Manutenção de Quadros de Distribuição</option>
+            <option value="disjuntor">Instalação de Disjuntores</option>
+            <option value="ManutencaoDisjuntor">Manutenção de Disjuntores</option>
+            <option value="casa">Instalação Elétrica da Casa Inteira</option>
+          </select>
+
+          <div id="campoQuantidade" class="campo-extra">
+            <label id="labelQuantidade" for="quantidade"></label>
+            <input type="number" id="quantidade" min="1" />
+          </div>
+        </div>
+
+        <div class="resultado-box">
+          <span>Total Previsto:</span>
+          <strong id="resultado">R$ 0,00</strong>
+        </div>
+
+        <button class="btn-calc" type="submit">Calcular Orçamento</button>
+      </form>
+      <div id="acoesOrcamento" class="acoes-btns">
+        <a href="https://wa.me/44988035397" class="btn-whatsapp" id="whatsappBtn" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon" />
+          Chamar no WhatsApp
+        </a>
+        <button type="button" class="btn-cancelar" id="cancelarBtn">Cancelar Orçamento</button>
+      </div>
+    </div>
+  </div>
 
   <section class="rodape-inferior">
     <div class="informações-da-marca no-rodape">
