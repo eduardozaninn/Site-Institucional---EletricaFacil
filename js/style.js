@@ -52,6 +52,14 @@ form.addEventListener("submit", function (e) {
     resultado.textContent = `R$ ${valor.toFixed(2).replace(".", ",")}`;
     acoesOrcamento.classList.add("mostrar");
 
+    let qntFormatada = `${qtd}`;
+
+    if (tipoServico === "fiacao" || tipoServico === "manutencao") {
+      qntFormatada = `${qtd} m`;
+    } else if (tipoServico === "casa") {
+      qntFormatada = `${qtd} m²`;
+    }
+
     const textoParaServico = servico.options[servico.selectedIndex].text;
 
     const textoDeCidade = cidade.options[cidade.selectedIndex].text;
@@ -68,7 +76,7 @@ form.addEventListener("submit", function (e) {
 
   *DETALHES DO ORÇAMENTO:*
   🔧 *Serviço:* ${textoParaServico}
-  🔢 *Quantidade:* ${qtd}
+  🔢 *Quantidade:* ${qntFormatada}
   💰 *Total Estimado:* ${resultado.textContent}
 
   Aguardo seu contato para confirmar os detalhes. Obrigado!`;
@@ -101,14 +109,14 @@ NavLinks.forEach((Link) => {
     const targetID = this.getAttribute("href");
 
     const animOptions = {
-      duration: 1.5,
+      duration: 1.8,
       scrollTo: targetID,
       ease: "power2.inOut",
     };
 
     if (targetID === "#Orcamento") {
-      animOptions.ease = "power2.inOut";
-      animOptions.duration = 2;
+      animOptions.ease = "bounce.out";
+      animOptions.duration = 2.5;
     }
 
     gsap.to(window, animOptions);

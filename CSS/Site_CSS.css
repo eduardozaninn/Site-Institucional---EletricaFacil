@@ -47,8 +47,7 @@ body {
 .rodape-links {
   list-style-type: none;
   display: flex;
-  margin-left: 250px;
-  margin-right: 300px;
+  margin-right: 160px;
   margin-top: 15px;
   align-items: center;
   gap: 120px;
