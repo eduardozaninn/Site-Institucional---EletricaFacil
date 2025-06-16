@@ -456,7 +456,6 @@ button:hover {
 
 .acoes-btns.mostrar {
   display: flex;
-  align-items: center;
   justify-content: center;
   align-items: stretch;
 }
@@ -845,7 +844,6 @@ button:hover {
     transform: translateY(0);
   }
 
-
   .main-banner {
     height: 400px;
   }
@@ -982,4 +980,22 @@ button:hover {
     height: 180px;
   }
 
+  .input-duplo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .acoesOrcamento{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .acoes-btns.mostrar{
+    flex-direction: column;
+  }
+
+  .btn-whatsapp,
+  .btn-cancelar{
+    width: 100%;
+  }
 }
