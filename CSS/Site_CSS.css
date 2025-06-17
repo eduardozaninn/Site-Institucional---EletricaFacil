@@ -32,7 +32,6 @@ body {
   background-color: var(--primary-color);
   display: flex;
   color: #fff;
-  padding: 0px;
   height: 105px;
   box-sizing: border-box;
 }
@@ -830,9 +829,8 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     height: auto;
-    padding: 10px 15px;
-    gap: 1px;
-
+    padding: 10px;
+    font-size: 14px;
   }
 
   .rodape-superior .logo-superior img {
@@ -958,7 +956,7 @@ button:hover {
   }
 
   .Minhas-redes-sociais {
-    padding-left: 20px;
+    padding-left: 12px;
   }
 
   .Regioes-Atendidas h3 {
@@ -976,12 +974,16 @@ button:hover {
   }
 
   .rodape-inferior ul li {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 15px;
   }
 
   .rodape-inferior ul li img {
     margin-right: 10px;
+  }
+
+  .titulo-servicos h3 {
+    font-size: 30px;
   }
 
   .principais-servicos .container {
