@@ -78,7 +78,7 @@ body {
 }
 
 .main-banner .imagem {
-  background-image: url("/IMAGENS/insMind.jpg");
+  background-image: url("../images/insMind.jpg");
   background-size: cover;
   background-position: center;
   width: 80%;
@@ -281,15 +281,15 @@ body {
 }
 
 .imagem-fiacao {
-  background-image: url("/IMAGENS/fiaçao.jpg");
+  background-image: url("../images/fiacao.jpg");
 }
 
 .imagem-tomadas-interruptores {
-  background-image: url("/IMAGENS/tomadas-interruptores.jpg");
+  background-image: url("../images/tomadas-interruptores.jpg");
 }
 
 .imagem-quadros-disjuntores {
-  background-image: url("/IMAGENS/quadros-disjuntores.jpg");
+  background-image: url("../images/quadros-disjuntores.jpg");
 }
 
 .descricao {
