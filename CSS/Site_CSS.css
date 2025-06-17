@@ -14,7 +14,6 @@
 body {
   font-family: Arial, sans-serif;
   color: #fff;
-  max-width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
