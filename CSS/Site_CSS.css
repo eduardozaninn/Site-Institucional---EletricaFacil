@@ -14,6 +14,7 @@
 body {
   font-family: Arial, sans-serif;
   color: #fff;
+  max-width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -788,6 +789,37 @@ button:hover {
     margin-right: 10px;
   }
 
+}
+
+@media (max-width: 830px) {
+  .principais-servicos .container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+  }
+
+  .principais-servicos .container > div {
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+  }
+
+  .imagem-fiacao,
+  .imagem-tomadas-interruptores,
+  .imagem-quadros-disjuntores {
+    height: 150px;
+  }
+
+  .descricao h4 {
+    font-size: 0.95rem;
+  }
+
+  .descricao p {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 576px) {
