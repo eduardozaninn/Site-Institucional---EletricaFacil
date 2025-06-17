@@ -64,7 +64,7 @@ form.addEventListener("submit", function (e) {
 
     const textoDeCidade = cidade.options[cidade.selectedIndex].text;
 
-    const numeroDoWhatsapp = "4488035397";
+    const numeroDoWhatsapp = "5544988297376";
 
     const mensagem = `Olá! Gostaria de solicitar um orçamento. 😊
 
